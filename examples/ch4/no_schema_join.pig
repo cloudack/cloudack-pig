@@ -10,7 +10,7 @@
 -- License for the specific language governing permissions and limitations
 -- under the License.
 
-divs  = load 'NYSE_dividends' as (exchange, stock_symbol, date, dividends);
-daily = load 'NYSE_daily';
+divs  = load 'data/NYSE_dividends' as (exchange, stock_symbol, date, dividends);
+daily = load 'data/NYSE_daily';
 jnd   = join divs by stock_symbol, daily by $1;
 dump jnd;

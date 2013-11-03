@@ -10,6 +10,6 @@
 -- License for the specific language governing permissions and limitations
 -- under the License.
 
-daily = load 'NYSE_daily';
+daily = load 'data/NYSE_daily';
 fltrd = filter daily by $6 > $3;
 dump fltrd;

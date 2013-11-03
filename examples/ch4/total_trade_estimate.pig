@@ -10,7 +10,7 @@
 -- License for the specific language governing permissions and limitations
 -- under the License.
 
-daily = load 'NYSE_daily' as (exchange:chararray, symbol:chararray,
+daily = load 'data/NYSE_daily' as (exchange:chararray, symbol:chararray,
 			date:chararray, open:float, high:float, low:float, close:float,
 			volume:int, adj_close:float);
 rough = foreach daily generate volume * close;

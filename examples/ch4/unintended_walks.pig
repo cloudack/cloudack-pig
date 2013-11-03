@@ -10,7 +10,7 @@
 -- License for the specific language governing permissions and limitations
 -- under the License.
 
-player     = load 'baseball' as (name:chararray, team:chararray,
+player     = load 'data/baseball' as (name:chararray, team:chararray,
 			   pos:bag{t:(p:chararray)}, bat:map[]);
 unintended = foreach player generate bat#'base_on_balls' - bat#'ibbs';
 dump unintended;
